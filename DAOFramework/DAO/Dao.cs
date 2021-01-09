@@ -36,11 +36,11 @@ namespace Db
             return conn;
         }
 
-        protected DbCommand CreateCommand(DbConnection conn, string text)
+        protected DbCommand CreateCommand(DbConnection conn, string query)
         {
             DbCommand cmd = providerFactory.CreateCommand();
             cmd.Connection = conn;
-            cmd.CommandText = text;
+            cmd.CommandText = query;
             return cmd;
         }
 
